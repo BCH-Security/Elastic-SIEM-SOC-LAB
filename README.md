@@ -179,7 +179,17 @@ output.elasticsearch:
 
   # Pipeline to route events to security, sysmon, or powershell pipelines.
   #pipeline: "winlogbeat-%{[agent.version]}-routing"
-```  
+```
+
+### 4. Starting winlogbeat Service
+```bash
+C:\Users\REDACTED> powershell "start-service winlogbeat"
+C:\Users\REDACTED> powershell "get-service winlogbeat"
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  winlogbeat         winlogbeat
+```
 
 
 ```
