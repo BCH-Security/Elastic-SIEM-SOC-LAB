@@ -122,15 +122,75 @@ c:\Users\REDACTED\Downloads\winlogbeat-9.3.2-windows-x86_64> dir
 ```            
 
 
+### 3. Update winlogbeat.yml to configure winlogbeat service
+```yml
+# ======================== Winlogbeat specific options =========================
+
+# event_logs specifies a list of event logs to monitor as well as any
+# accompanying options. The YAML data type of event_logs is a list of
+# dictionaries.
+#
+# The supported keys are name, id, xml_query, tags, fields, fields_under_root,
+# forwarded, ignore_older, level, event_id, provider, include_xml, and 
+# ignore_missing_channel.
+# The xml_query key requires an id and must not be used with the name,
+# ignore_older, level, event_id, or provider keys. Please visit the
+# documentation for the complete details of each option. Query filters in
+# custom XML queries are not always reliable across all Windows versions and
+# forwarding scenarios.
+# https://go.es.io/WinlogbeatConfig
+
+winlogbeat.event_logs:
+  - name: Application
+    ignore_older: 72h
+
+  - name: System
+
+  - name: Security
+    event_id: 4624, 4625, 4700-4800, 5140, 5142, 5157
+
+  - name: Microsoft-Windows-Sysmon/Operational
+
+  - name: Windows PowerShell
+    event_id: 400, 403, 600, 800
+
+  - name: Microsoft-Windows-PowerShell/Operational
+    event_id: 4103, 4104, 4105, 4106
+
+  - name: ForwardedEvents
+    tags: [forwarded]
+
+# ================================== Outputs ===================================
+
+# Configure what output to use when sending the data collected by the beat.
+
+# ---------------------------- Elasticsearch Output ----------------------------
+output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: ["SIEM-SERVER-IP:9200"]
+
+  # Protocol - either `http` (default) or `https`.
+  #protocol: "https"
+
+  # Authentication credentials - either API key or username/password.
+  #api_key: "id:api_key"
+  username: "elastic"
+  password: "changeme"
+
+  # Pipeline to route events to security, sysmon, or powershell pipelines.
+  #pipeline: "winlogbeat-%{[agent.version]}-routing"
+```  
+
+
 ```
 http://localhost:5601
 ```
 
 ---
 
-## 🔍 Threat Hunting Example
+## Threat Hunting Example
 
-### 🎯 Detect Failed Logon Attempts (Event ID 4625)
+### Detect Failed Logon Attempts (Event ID 4625)
 
 Windows Event ID **4625** indicates a **failed login attempt**.
 
