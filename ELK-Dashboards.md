@@ -8,6 +8,13 @@
 * Visting the dashboard page
 ![dashboard](Images/dashboard-1.png)
 
+* Creating new dashboard
+![dashboard](Images/dashboard-2.png)
+
+* Creating visualization
+![dashboard](Images/dashboard-3.png)
+
+
 
 * Choose:
 
