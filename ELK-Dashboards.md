@@ -1,12 +1,31 @@
 #  Elastic SIEM Dashboards (Failed Login Monitoring)
 
-## Attack Simulation
+##  Introduction
+
+This document focuses on building and analyzing **failed login monitoring dashboards** using the Elastic SIEM stack. It demonstrates how to simulate real-world attack scenarios and visualize security events for effective threat detection.
+
+In this lab, we generate failed authentication attempts through controlled brute-force activity and capture these events using Winlogbeat. The logs are then ingested into Elasticsearch and visualized in Kibana to provide actionable insights.
+
+The goal is to help security analysts:
+
+* Detect brute-force attacks in real time
+* Identify suspicious login patterns
+* Monitor attacker behavior through log analysis
+* Build meaningful dashboards for SOC operations
+
+This hands-on approach bridges the gap between attack simulation and defensive monitoring, making it ideal for learning practical SIEM and threat hunting skills.
+
+---
+
+##  Attack Simulation
+
 * Use Hydra to Bruteforce RDP Login Credentials
+
 ```bash
 hydra -L /usr/share/wordlists/SecLists-master/Usernames/top-usernames-shortlist.txt -P /usr/share/wordlists/SecLists-master/Passwords/Leaked-Databases/rockyou-05.txt rdp://Target-IP:3389 -t 16 -I -V
 ```
----
 
+---
 
 ##  Creating a Dashboard for Failed Login Attempts
 
