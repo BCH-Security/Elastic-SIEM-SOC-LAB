@@ -1,12 +1,12 @@
-# 🔐 Elastic SIEM SOC Lab
+#  Elastic SIEM SOC Lab
 
-## 📌 Overview
+##  Overview
 
 This project demonstrates a hands-on **Security Operations Center (SOC) lab** built using the Elastic Stack for monitoring, detection, and threat hunting.
 
 ---
 
-## 🧠 What is SIEM?
+##  What is SIEM?
 
 **SIEM (Security Information and Event Management)** is a solution that collects, analyzes, and correlates logs from multiple sources in real time to detect suspicious activity and security threats.
 
@@ -19,7 +19,7 @@ Key capabilities:
 
 ---
 
-## ⚙️ What is Elastic?
+##  What is Elastic?
 
 **Elastic (Elastic Stack / ELK Stack)** is a powerful open-source platform used for search, analytics, and visualization.
 
@@ -31,11 +31,11 @@ It includes:
 
 ---
 
-## 🏗️ Lab Environment
+##  Lab Environment
 
 This SOC lab consists of three main machines:
 
-### 🐧 Ubuntu Server (SIEM Server)
+###  Ubuntu Server (SIEM Server)
 
 * Hosts:
 
@@ -45,7 +45,7 @@ This SOC lab consists of three main machines:
 
 ---
 
-### 🪟 Windows 11 Workstation (Victim Machine)
+###  Windows 11 Workstation (Victim Machine)
 
 * Configured with:
 
@@ -54,14 +54,14 @@ This SOC lab consists of three main machines:
 
 ---
 
-### 🐉 Attacker Machine (Kali Linux)
+###  Attacker Machine (Kali Linux)
 
 * Used to simulate attacks
 * Generates logs (e.g., failed login attempts)
 
 ---
 
-## 🐳 Setup: Installing Elastic Stack with Docker
+##  Setup: Installing Elastic Stack with Docker
 
 ### 1. Install Docker
 
@@ -74,10 +74,10 @@ sudo systemctl start docker
 
 ---
 
-### 2. Create a Docker Network
+### 2. Create the Elastic Stack using Docker
 
 ```bash
-docker network create elastic
+docker compose up -d
 ```
 
 ---
