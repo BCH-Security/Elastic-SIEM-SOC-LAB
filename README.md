@@ -93,13 +93,13 @@ Winlogbeat can be downloaded from [winlogbeat-9.3.2-windows-x86_64.zip](https://
 
 ### 2. Install winlogbeat Service
 * Extract winlogbeat-9.3.2-windows-x86_64.zip
-* Open cmd as administrator and run the powershell script:
+* Open cmd as administrator and run the powershell script install-service-winlogbeat.ps1:
 ```bash
 c:\Users\REDACTED\Downloads\winlogbeat-9.3.2-windows-x86_64> dir
  Le volume dans le lecteur C n’a pas de nom.
  Le numéro de série du volume est CC1A-F90E
 
- Répertoire de c:\Users\REDACTED\Downloads\winlogbeat-9.3.2-windows-x86_64> dir
+ Répertoire de c:\Users\REDACTED\Downloads\winlogbeat-9.3.2-windows-x86_64
 
 29/03/2026  18:57    <DIR>          .
 29/03/2026  17:58    <DIR>          ..
@@ -119,6 +119,8 @@ c:\Users\REDACTED\Downloads\winlogbeat-9.3.2-windows-x86_64> dir
 29/03/2026  18:58             7 758 winlogbeat.yml
               10 fichier(s)      122 506 481 octets
                6 Rép(s)  42 238 472 192 octets libres
+
+c:\Users\REDACTED\Downloads\winlogbeat-9.3.2-windows-x86_64> powershell -ep bypass .\install-service-winlogbeat.ps1
 ```            
 
 
