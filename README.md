@@ -80,34 +80,47 @@ sudo systemctl start docker
 docker compose up -d
 ```
 
+
 ---
 
-### 3. Run Elasticsearch
 
+##  Beat Setup: Installing winlogbeat Service
+
+### 1. Download Winlogbeat
+Winlogbeat can be downloaded from [winlogbeat-9.3.2-windows-x86_64.zip](https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-9.3.2-windows-x86_64.zip)
+
+
+
+### 2. Install winlogbeat Service
+* Extract winlogbeat-9.3.2-windows-x86_64.zip
+* Open cmd as administrator and run the powershell script:
 ```bash
-docker run -d --name elasticsearch \
-  --net elastic \
-  -p 9200:9200 \
-  -e "discovery.type=single-node" \
-  docker.elastic.co/elasticsearch/elasticsearch:8.11.0
-```
+c:\Users\REDACTED\Downloads\winlogbeat-9.3.2-windows-x86_64> dir
+ Le volume dans le lecteur C n’a pas de nom.
+ Le numéro de série du volume est CC1A-F90E
 
----
+ Répertoire de c:\Users\REDACTED\Downloads\winlogbeat-9.3.2-windows-x86_64> dir
 
-### 4. Run Kibana
+29/03/2026  18:57    <DIR>          .
+29/03/2026  17:58    <DIR>          ..
+29/03/2026  17:58                41 .build_hash.txt
+29/03/2026  19:05    <DIR>          data
+29/03/2026  17:58           413 715 fields.yml
+29/03/2026  17:58             3 224 install-service-winlogbeat.ps1
+29/03/2026  17:58    <DIR>          kibana
+29/03/2026  17:58            13 675 LICENSE.txt
+29/03/2026  18:57    <DIR>          logs
+29/03/2026  17:58    <DIR>          module
+29/03/2026  17:58         4 757 457 NOTICE.txt
+29/03/2026  17:58               832 README.md
+29/03/2026  17:58               298 uninstall-service-winlogbeat.ps1
+29/03/2026  17:58       117 241 824 winlogbeat.exe
+29/03/2026  17:58            67 657 winlogbeat.reference.yml
+29/03/2026  18:58             7 758 winlogbeat.yml
+              10 fichier(s)      122 506 481 octets
+               6 Rép(s)  42 238 472 192 octets libres
+```            
 
-```bash
-docker run -d --name kibana \
-  --net elastic \
-  -p 5601:5601 \
-  docker.elastic.co/kibana/kibana:8.11.0
-```
-
----
-
-### 5. Access Kibana
-
-Open your browser:
 
 ```
 http://localhost:5601
