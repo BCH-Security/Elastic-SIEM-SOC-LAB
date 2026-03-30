@@ -215,10 +215,11 @@ http://SIEM-SERVER-IP:5601
 ```kql
 event.code: "4625"
 ```
+![discover](Images/discover-1.png)
 
 ---
 
-### 📊 Useful Fields
+###  Useful Fields
 
 * `winlog.event_data.TargetUserName`
 * `source.ip`
@@ -226,7 +227,7 @@ event.code: "4625"
 
 ---
 
-### 🚨 Use Case
+###  Use Case
 
 Detect:
 
@@ -236,48 +237,8 @@ Detect:
 
 ---
 
-## 📈 Creating a Dashboard for Failed Login Attempts
 
-### 1. Create Visualization
-
-* Go to **Kibana → Visualize**
-* Choose:
-
-  * Bar chart or Data table
-
----
-
-### 2. Configure
-
-* Index pattern: `winlogbeat-*`
-* Metric: Count
-* Breakdown by:
-
-  * `source.ip` or `TargetUserName`
-
----
-
-### 3. Add Filter
-
-```kql
-event.code: "4625"
-```
-
----
-
-### 4. Save Visualization
-
----
-
-### 5. Create Dashboard
-
-* Go to **Dashboard → Create new dashboard**
-* Add your visualization
-* Save as: **Failed Login Monitoring**
-
----
-
-## 🛡️ Outcome
+##  Outcome
 
 This lab allows you to:
 
@@ -288,14 +249,9 @@ This lab allows you to:
 
 ---
 
-## 📎 Future Improvements
 
-* Add alerts using Elastic Detection Rules
-* Integrate Filebeat for Linux logs
-* Simulate more attack scenarios (RDP brute force, privilege escalation)
 
----
 
-## 👨‍💻 Author
+##  Author
 
 BCH-Security
