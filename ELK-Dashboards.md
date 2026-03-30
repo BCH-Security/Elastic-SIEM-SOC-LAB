@@ -21,7 +21,12 @@
 ![dashboard](Images/dashboard-4.png)
 ![dashboard](Images/dashboard-5.png)
 
+### 3. Configuring visualization type and Data view
+* Choosing Table for Visualization Type
+![dashboard](Images/dashboard-6.png)
 
+* Selecting winlogbeat data view
+![dashboard](Images/dashboard-7.png)
 
 * Choose:
 
