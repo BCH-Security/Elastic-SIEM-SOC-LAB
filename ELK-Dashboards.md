@@ -34,6 +34,14 @@
 * Click on `Add or drag-and-drop a field`
 ![dashboard](Images/dashboard-8.png)
 
+* Adding the field `winlog.event_data.TargetUserName`
+![dashboard](Images/dashboard-9.png)
+
+* Adding metrics
+![dashboard](Images/dashboard-10.png)
+![dashboard](Images/dashboard-11.png)
+
+
 
 
 * Choose:
