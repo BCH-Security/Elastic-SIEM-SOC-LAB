@@ -50,13 +50,6 @@
 
 
 
-
-
-
-
-
-
-
 ---
 ### 4. Save Visualization
 * Click on `Save and return` 
@@ -65,16 +58,19 @@
 * Click on `Save`
 ![dashboard](Images/dashboard-16.png)
 
-* Give name for the dashboard
+* Give name for the dashboard and click on  `Save`
 ![dashboard](Images/dashboard-17.png)
 
 
+## Refining The Visualization
+Suppose the SOC Manager suggested adding the source IP Address to the dashboard
 
----
-### 5. Create Dashboard
+* Click on `Edit Visualization`
+![dashboard](Images/dashboard-18.png)
 
-* Go to **Dashboard → Create new dashboard**
-* Add your visualization
-* Save as: **Failed Login Monitoring**
 
----
+* Adding the field `winlog.event_data.IpAddress`
+![dashboard](Images/dashboard-19.png)
+
+
+
