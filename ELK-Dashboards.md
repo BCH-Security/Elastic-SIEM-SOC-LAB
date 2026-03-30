@@ -76,3 +76,15 @@ Suppose the SOC Manager suggested adding the source IP Address to the dashboard
 ![dashboard](Images/dashboard-20.png)
 ![dashboard](Images/dashboard-21.png)
 
+
+
+
+---
+
+##  Outcome
+
+This lab allows you to:
+* Simulate real-world attacks
+* Build SOC-level dashboards
+* Detect Failed Login Monitoring
+* Detect suspicious activity
