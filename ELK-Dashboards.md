@@ -93,5 +93,5 @@ Suppose the SOC Manager suggested adding the source IP Address to the dashboard
 This lab allows you to:
 * Simulate real-world attacks
 * Build SOC-level dashboards
-* Detect Failed Login Monitoring
+* Detect Failed Login Attempts
 * Detect suspicious activity
