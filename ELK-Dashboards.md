@@ -15,6 +15,13 @@
 ![dashboard](Images/dashboard-3.png)
 
 
+### 2. Add Filter
+
+* Adding Filter (In our case event code 4625)
+![dashboard](Images/dashboard-4.png)
+![dashboard](Images/dashboard-5.png)
+
+
 
 * Choose:
 
