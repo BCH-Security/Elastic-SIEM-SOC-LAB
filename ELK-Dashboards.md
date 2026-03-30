@@ -5,7 +5,10 @@
 
 ### 1. Create Visualization
 
-* Go to **Kibana → Visualize**
+* Visting the dashboard page
+![dashboard](Images/dashboard-1.png)
+
+
 * Choose:
 
   * Bar chart or Data table
