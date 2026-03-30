@@ -2,7 +2,7 @@
 
 
 ##  Creating a Dashboard for Failed Login Attempts
-
+---
 ### 1. Create Visualization
 
 * Visting the dashboard page
@@ -14,14 +14,14 @@
 * Creating visualization
 ![dashboard](Images/dashboard-3.png)
 
-
+---
 ### 2. Add Filter
 
 * Adding Filter (In our case event code 4625)
 ![dashboard](Images/dashboard-4.png)
 ![dashboard](Images/dashboard-5.png)
 
-
+---
 ### 3. Configuring visualization type and Data view
 * Choosing Table for Visualization Type
 ![dashboard](Images/dashboard-6.png)
@@ -29,7 +29,7 @@
 * Selecting winlogbeat data view
 ![dashboard](Images/dashboard-7.png)
 
-
+---
 ### 4. Add Fields
 * Click on `Add or drag-and-drop a field`
 ![dashboard](Images/dashboard-8.png)
@@ -45,28 +45,17 @@
 * Adding the field `host.hostname`
 ![dashboard](Images/dashboard-13.png)
 
+* Adding the field `winlog.event_data.LogonType`
+![dashboard](Images/dashboard-14.png)
 
-* Choose:
 
-  * Bar chart or Data table
 
----
 
-### 2. Configure
 
-* Index pattern: `winlogbeat-*`
-* Metric: Count
-* Breakdown by:
 
-  * `source.ip` or `TargetUserName`
 
----
 
-### 3. Add Filter
 
-```kql
-event.code: "4625"
-```
 
 ---
 
