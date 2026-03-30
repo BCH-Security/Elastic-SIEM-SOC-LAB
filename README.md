@@ -204,7 +204,13 @@ http://localhost:5601
 
 Windows Event ID **4625** indicates a **failed login attempt**.
 
-### 🔎 Search in Kibana (KQL)
+### Access Kibana
+```
+http://SIEM-SERVER-IP:5601
+```
+
+
+###  Search in Kibana (KQL)
 
 ```kql
 event.code: "4625"
