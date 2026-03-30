@@ -72,5 +72,7 @@ Suppose the SOC Manager suggested adding the source IP Address to the dashboard
 * Adding the field `winlog.event_data.IpAddress`
 ![dashboard](Images/dashboard-19.png)
 
-
+* Apply the new changes and save
+![dashboard](Images/dashboard-20.png)
+![dashboard](Images/dashboard-21.png)
 
