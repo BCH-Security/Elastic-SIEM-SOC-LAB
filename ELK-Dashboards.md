@@ -37,11 +37,13 @@
 * Adding the field `winlog.event_data.TargetUserName`
 ![dashboard](Images/dashboard-9.png)
 
-* Adding metrics
+* Adding metrics (count: Number of Login attempts)
 ![dashboard](Images/dashboard-10.png)
 ![dashboard](Images/dashboard-11.png)
+![dashboard](Images/dashboard-12.png)
 
-
+* Adding the field `host.hostname`
+![dashboard](Images/dashboard-13.png)
 
 
 * Choose:
