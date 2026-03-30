@@ -58,11 +58,19 @@
 
 
 ---
-
 ### 4. Save Visualization
+* Click on `Save and return` 
+![dashboard](Images/dashboard-15.png)
+
+* Click on `Save`
+![dashboard](Images/dashboard-16.png)
+
+* Give name for the dashboard
+![dashboard](Images/dashboard-17.png)
+
+
 
 ---
-
 ### 5. Create Dashboard
 
 * Go to **Dashboard → Create new dashboard**
